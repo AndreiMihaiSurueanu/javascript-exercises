@@ -21,3 +21,70 @@ For example:
     - "FxLxLxFx" returns 0 (robot is already back at its
         starting point)
 */
+
+console.log('helo');
+
+function flr(directions) {
+    let arr = directions.match(/F|L|R/g);
+    console.log(arr)
+    let position = [0,0];
+    // 0 -> up, 1 -> right, 2 -> down, 3 -> left
+    let way = 0;
+    arr.forEach( (element, index, arr) => {
+        if (element === "R") {
+            way === 3 ? way = 0 : way++;
+        }
+        if (element === "L") {
+            way === 0 ? way = 3 : way--;
+        }
+        if (element === "F") {
+            switch (way) {
+                case 0:
+                    position[1]++;
+                    break;
+                case 1:
+                    position[0]++;
+                    break;
+                case 2:
+                    position[1]--;
+                    break;
+                case 3:
+                    position[0]--;
+                    break;
+                default:
+                    break;
+            }
+        }
+    });
+    console.log(position)
+
+    let noOfComands = 0;
+    if (position[0] > 0) {
+        noOfComands += position[0];
+        way == 1 ? noOfComands += 2 : (way == 0 || way == 2) ? noOfComands++ : noOfComands;
+    }
+    if (position[0] < 0) {
+        noOfComands += Math.abs(position[0]);
+        way == 3 ? noOfComands += 2 : (way == 0 || way == 2) ? noOfComands++ : noOfComands;
+    }
+    if (position[1] > 0) {
+        noOfComands += position[1];
+        way == 0 ? noOfComands += 2 : (way == 1 || way == 3) ? noOfComands++ : noOfComands;
+    }
+    if (position[1] < 0) {
+        noOfComands += Math.abs(position[1]);
+        way == 2 ? noOfComands += 2 : (way == 1 || way == 3) ? noOfComands++ : noOfComands;
+    }
+
+    return noOfComands;
+}
+
+// let directions = 'RF'
+// let directions = 'LFRFRFR'
+let directions = 'FxLxLxFx'
+
+let res = flr(directions);
+
+console.log(res);
+
+
