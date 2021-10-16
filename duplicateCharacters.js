@@ -1,3 +1,19 @@
+/* 
+Write a functino that accepts a string and returns an
+integer value representing the number of distinct
+duplicated characters within the string, i.e. the number
+of characters that appear twice or more.
+
+Your solution should be able to deal with all alphanumeric
+and special characters. Your solution should also also  <= this is the original text
+treat upper and lower case characters as distinct
+characters.
+
+For example: 
+
+Given "Aasdefsgh!!!" the expected result would be '2' ('s'
+and '!' are duplicated)
+ */
 console.log('helo');
 
 function duplicateCharacters(input) {
