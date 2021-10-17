@@ -14,4 +14,3 @@ console.log(arms)
 let robot = Object.assign({'hasHands':true, "arms": false}, obj1, obj2, obj3);
 console.log(robot);
 
-
