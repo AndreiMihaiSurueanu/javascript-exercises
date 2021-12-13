@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        EMMET POWER 💪🔥🚀
+
+        #1[style="background-color:#bce8f1; padding:10px"]{Div1}>#2[style="background-color:#d9edf7; padding:10px"]{Div2}>#3[style="background-color:#3a87ad; padding:10px"]{Div3}
+
+     -->
+     <!-- Given that this HTML and JavaScript will produce the following:
+        What values will be logged to the console when a user clicks on Div2?
+     -->
+     <!-- I guess the answer is: None of the above. ... 😕 -->
+    <script>
+        var divs = document.getElementsByTagName('div')
+
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].addEventListener("click", logEvent, false);
+        }
+
+        function logEvent() {
+            console.log(this.id)
+        }
+        console.log('hello')
+    </script>
+    <div id="1" style="background-color:#bce8f1; padding:10px">Div1
+        <div id="2" style="background-color:#d9edf7; padding:10px">Div2
+            <div id="3" style="background-color:#3a87ad; padding:10px">Div3</div>
+        </div>
+    </div>
+</body>
+</html>

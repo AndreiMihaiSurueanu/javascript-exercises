@@ -8,8 +8,6 @@ yarn-error.log*
 # Transitory test file
 js.js
 
-TMT
-
 # Runtime data
 pids
 *.pid
