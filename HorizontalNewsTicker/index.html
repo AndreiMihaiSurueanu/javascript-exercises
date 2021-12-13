@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+        <style type="text/css">
+            body{
+                font-family: Roboto, sans-serif;
+            }
+
+            .ticker-wrapper{
+                position: relative;
+                max-width: 700px;
+                margin: auto;
+                padding-top: 200px;
+            }
+
+            .bigHeading{
+                display: block;
+                position: absolute;
+                font-style: italic;
+                font-size: 40px;
+                background: red;
+                color: white;
+                text-transform: uppercase;
+                padding: 15px;
+                letter-spacing: 3px;
+                font-weight: 700;
+                z-index: 2;
+            }
+
+            .bigHeading::after,
+            .bigHeading::before{
+                content: '';
+                width: 0;
+                margin: 0;
+                position: absolute;
+                border-width: 79.3px;
+                border-style: solid;
+                top: 0;
+                z-index: -1;
+            }
+            .bigHeading::before{
+                border-color: red transparent transparent transparent;
+                right: -80px;
+            }
+            .bigHeading::after{
+                border-color: transparent transparent red transparent;
+                left: -79px;
+                top: -79.5px;
+            }
+            .text-update{
+                height: 70px;
+                background: blue;
+                overflow: hidden;
+                position: relative;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 25px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                left: 125px;
+            }
+            .text-update p {
+                position: absolute;
+                width: 150%;
+                margin: 0;
+                font-weight: 700;
+                text-align: left;
+                transform: translateX(100%);
+                animation: moving 25s linear infinite;
+            }
+            @keyframes moving{
+                0%{
+                    transform: translateX(100%);
+                }
+                100%{
+                    transform: translateX(-100%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ticker-wrapper">
+            <div class="bigHeading">Breaking</div>
+            <div class="text-update">
+                <p>
+                    Xiaomi Mi 9 will soon be able to increase 
+                    its RAM capacity by 3GB
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
