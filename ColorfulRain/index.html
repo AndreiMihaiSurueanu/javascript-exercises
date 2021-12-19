@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Rain | Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Idea from: "Online Tutorials" YouTube channel -->
+    <!-- https://www.youtube.com/watch?v=YhXxBhInJMI -->
+
+    <script>
+        function rain(){
+            let amount = 50;
+            let body = document.querySelector('body');
+            let i = 0;
+            while(i < amount){
+                let drop = document.createElement('i');
+
+                let size = Math.random() * 5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -20;
+                let duration = Math.random() * 10;
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay + 's';
+                drop.style.animationDuration = 5 + duration + 's';
+                body.appendChild(drop);
+                i++;
+            }
+        }
+
+        rain();
+    </script>
+    
+</body>
+</html>
