@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Blob | CSS & SVG</title>
+</head>
+<body>
+    <!-- Idea from: "Online Tutorials" YouTube channel -->
+    <!-- https://www.youtube.com/watch?v=liW6bDLnuuk -->
+
+    <section>
+        <div class="blob">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(254, 0, 242);" ></stop>
+                        <stop offset="100%" style="stop-color: rgb(251, 0, 128);" ></stop>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#gradient)">
+                    <animate attributeName="d"
+                    dur="5s"
+                    repeatCount="indefinite"
+                    values="M443,301.5Q392,353,352,396.5Q312,440,
+                    254,428.5Q196,417,143,391.5Q90,366,77,308Q64,
+                    250,62,181Q60,112,126,91Q192,70,258.5,44.5Q325,
+                    19,366.5,77Q408,135,451,192.5Q494,250,443,301.5Z;
+
+                    M416,300Q387,350,348.5,391.5Q310,433,244.5,
+                    450.5Q179,468,129.5,421Q80,374,89,312Q98,250,
+                    90,189Q82,128,134,90Q186,52,244.5,70Q303,88,342,
+                    121.5Q381,155,413,202.5Q445,250,416,300Z;
+
+                    M423,320.5Q444,391,373.5,402.5Q303,414,251,
+                    411Q199,408,146.5,385.5Q94,363,57,306.5Q20,
+                    250,62.5,197Q105,144,152,119Q199,94,250.5,91.5Q302,
+                    89,353,113Q404,138,403,194Q402,250,423,320.5Z;
+                    
+                    M443,301.5Q392,353,352,396.5Q312,440,
+                    254,428.5Q196,417,143,391.5Q90,366,77,308Q64,
+                    250,62,181Q60,112,126,91Q192,70,258.5,44.5Q325,
+                    19,366.5,77Q408,135,451,192.5Q494,250,443,301.5Z" ></animate>
+                    <!-- Add 1st and last value same for loop animation -->
+                </path>
+            </svg>
+        </div>
+        <!-- to add glow effects -->
+
+        <div class="blob">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(254, 0, 242);" ></stop>
+                        <stop offset="100%" style="stop-color: rgb(251, 0, 128);" ></stop>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#gradient)">
+                    <animate attributeName="d"
+                    dur="5s"
+                    repeatCount="indefinite"
+                    values="M443,301.5Q392,353,352,396.5Q312,440,
+                    254,428.5Q196,417,143,391.5Q90,366,77,308Q64,
+                    250,62,181Q60,112,126,91Q192,70,258.5,44.5Q325,
+                    19,366.5,77Q408,135,451,192.5Q494,250,443,301.5Z;
+
+                    M416,300Q387,350,348.5,391.5Q310,433,244.5,
+                    450.5Q179,468,129.5,421Q80,374,89,312Q98,250,
+                    90,189Q82,128,134,90Q186,52,244.5,70Q303,88,342,
+                    121.5Q381,155,413,202.5Q445,250,416,300Z;
+
+                    M423,320.5Q444,391,373.5,402.5Q303,414,251,
+                    411Q199,408,146.5,385.5Q94,363,57,306.5Q20,
+                    250,62.5,197Q105,144,152,119Q199,94,250.5,91.5Q302,
+                    89,353,113Q404,138,403,194Q402,250,423,320.5Z;
+                    
+                    M443,301.5Q392,353,352,396.5Q312,440,
+                    254,428.5Q196,417,143,391.5Q90,366,77,308Q64,
+                    250,62,181Q60,112,126,91Q192,70,258.5,44.5Q325,
+                    19,366.5,77Q408,135,451,192.5Q494,250,443,301.5Z" ></animate>
+                    <!-- Add 1st and last value same for loop animation -->
+                </path>
+            </svg>
+        </div>
+    </section>
+
+</body>
+</html>
