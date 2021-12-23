@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --bg: #e8ffe8;
+    --tree-start: #69c069;
+    --tree-end: #77dd77;
+    --tree-edge: #00000019;
+    --tree-bottom-start: #bb4622;
+    --tree-bottom-end: #df7214;
+    --tree-bottom-edge: #00000055;
+    --tree-shadow: #0002;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+}
+.tree {
+    position: relative;
+    top: -100px;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(30deg);
+    animation: animate 6s linear infinite;
+}
+.tree::before {
+    content: "⭐";
+    position: absolute;
+    top: -120px;
+    left: calc(50% - 45px);
+    font-size: 4em;
+}
+@keyframes animate {
+    0% {
+        transform: rotateX(-20deg) rotateY(360deg) scaleX(0.6) scaleZ(0.6) scaleY(0.7);
+    }
+    100% {
+        transform: rotateX(-20deg) rotateY(0deg) scaleX(0.6) scaleZ(0.6) scaleY(0.7);
+    }
+}
+.tree div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateY(calc(100px * var(--j)));
+}
+.tree div.top span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--tree-start), var(--tree-end));
+    clip-path: polygon(50% 0%,0% 100%,100% 100%);
+    transform-origin: bottom;
+    border-bottom: 10px solid var(--tree-edge);
+    transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(173px);
+}
+.tree div.bottom span {
+    position: absolute;
+    top: 350px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(90deg, var(--tree-bottom-start), var(--tree-bottom-end));
+    /* clip-path: polygon(50% 0%,0% 100%,100% 100%); */
+    transform-origin: bottom;
+    border-bottom: 10px solid var(--tree-bottom-edge);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(30px);
+}
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: var(--tree-shadow);
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(-500px);
+    filter: blur(5px);
+}
