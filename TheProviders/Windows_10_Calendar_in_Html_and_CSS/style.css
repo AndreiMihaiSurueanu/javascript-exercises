@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+/*Styling for Calendar*/
+
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	font-family: 'Ubuntu' , sans-serif;
+	background: #f5f5ff;
+	box-sizing: border-box;
+	transform: translate(0%,15%);
+	overflow: hidden;
+}
+
+.main{
+	width: 400px;
+	height: 100%;
+	color: #ffd;
+	background-color: rgba(58,58,58,255);
+	box-shadow: rgba(0,0,0,0.6) 0px 20px 50px;
+	z-index: -1;
+}
+
+.week-days{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(58,58,58,255);
+	overflow: hidden;
+	z-index: 1;
+}
+p{
+	color: #ccc;
+	padding: 0px 15px;
+}
+hr{
+	border-top-width: 0;
+	border-bottom-color: #666;
+}
+.week , .days , .disable{
+	width: 30px;
+	height: 25px;
+	padding: 10px;
+	margin: 1.5px;
+	text-align: center;
+	line-height: 1.5em;
+	border:1px;
+	border:2px solid transparent;
+	background-color: rgba(58,58,58,255);
+	float: left;
+}
+.days:hover{
+	border:2px solid #a8a5a5;
+}
+.active{
+	border:2px solid #000;
+	background-color: #3458eb;
+}
+.disable{
+	color: #666;
+	cursor: no-drop;
+}
+#movediv{
+	position: absolute;
+	height: 110px;
+	width: 110px;
+	background-color: #ffd;
+	border-radius: 50%;
+	opacity: .3;
+	filter: blur(20px);
+	z-index: -1;
+}
