@@ -1,0 +1,74 @@
+  
+/*Styling for Info Hover Card*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html , body{
+  height: 100%;
+}
+body{
+  display: grid;
+  place-content:center;
+  background-color: #0099ff;
+  font-family: "nunito" , sans-serif;
+}
+.card{
+  position: relative;
+  background-color: #fff;
+  padding: 42px 32px;
+  clip-path: circle(5% at 95% 12%);
+  transition: all ease-in-out .6s;
+  transition: all ease-in-out .6s;
+  cursor: pointer;
+}
+span{
+  position: absolute;
+  top: 10px;
+  right: 28px;
+  font-size: 1.6em;
+  color: #000000;
+  transition: ease-out .3s;
+}
+h1{
+  font-size: 2.8em;
+  line-height: 1.5;
+}
+p{
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+.card:hover{
+  clip-path: circle(75%);
+  border-radius: 20px;
+  box-shadow: 5px 8px 30px rgba(0,0,0,0.5);
+}
+.card:hover span{
+  opacity: 0;
+}
+button{
+  background-color: #ff0000;
+  color: white;
+  height: 35px;
+  width: 100px;
+  border:none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+img{
+  visibility: hidden;
+  height: 33px;
+  width: 40px;
+  margin-bottom: -12px;
+}
+button:focus{
+   background-color: #ccc;
+   color: #919191;
+}
+button:focus ~ img{
+  visibility: visible;
+}
