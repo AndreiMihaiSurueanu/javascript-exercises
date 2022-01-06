@@ -1,0 +1,72 @@
+
+/*CSS for Hover Cards*/
+
+
+body {
+        padding: 0%;
+        margin: 0%;
+        font-family: sans-serif;
+    }
+
+    #main {
+        height: 100vh;
+        width: 100vw;
+        background-color: #e7e7e7;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: space-around;
+        perspective: 600px;
+    }
+
+    .box {
+        height: 320px;
+        width: 270px;
+        border-radius: 30px;
+        border: 1px solid rgb(255, 255, 255);
+        transform: rotateX(20deg) translateZ(0px) scale(1);
+        box-shadow: 1px 20px 40px -10px rgb(168, 168, 168);
+        transition: .5s cubic-bezier(0.07, 0.77, 0.85, 1.61);
+    }
+
+    .box img {
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .box:hover {
+        transform: rotateX(0deg) translateZ(50px) scale(1.05);
+        box-shadow: 0px 100px 120px -60px rgba(98, 98, 98, 0.75);
+    }
+
+    .card_body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card_body_content {
+        width: 80%;
+    }
+
+    .price {
+        font-weight: 100;
+        float: right;
+    }
+
+    .title {
+        font-weight: 100;
+    }
+    
+    
+    @media only screen and (max-width: 600px) {
+        #main {
+            height: 1600px;
+            width: 100%;
+            align-content: space-around;
+
+        }
+
+        #box {
+            margin-top: 50px;
+        }
+    }
+
