@@ -81,6 +81,12 @@
      moveDiv.style.top = (y+ -120) + 'px';
      moveDiv.style.left = (x + -60) + 'px';
  	}
+
+	document.addEventListener('click', function(e){
+		document.querySelector('.active')?.classList.toggle('active');
+		e.target.classList.toggle('active');
+	})
+
  </script>
 
 
