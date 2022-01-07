@@ -83,8 +83,11 @@
  	}
 
 	document.addEventListener('click', function(e){
-		document.querySelector('.active')?.classList.toggle('active');
-		e.target.classList.toggle('active');
+		if (e.target.classList.contains('days')) {
+			console.log(e.target.classList)
+			document.querySelector('.active')?.classList.toggle('active');
+			e.target.classList.toggle('active');
+		}
 	})
 
  </script>
