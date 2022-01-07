@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Lights on off on toggle Button</title>
+</head>
+<style>
+      *{
+          margin: 0;
+          padding: 0;
+          font-family: 'Poppins' , sans-serif;
+      }
+      img{
+          margin-top: -7px;
+      }
+      .off img{
+          width: 100%;
+          height: 100vh;
+      }
+      .on img{
+          width: 100%;
+          height: 100vh;
+      }
+      #btn{
+          display: none;
+      }
+      label{
+          width: 70px;
+          height: 25px;
+          position: fixed;
+          left: 85%;
+          top: 15px;
+          background-color: #000;
+          border-radius: 50px;
+          border: 2px solid #000;
+      }
+      span{
+          position: absolute;
+          top: 8%;
+          left: 3%;
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+          border-radius: 50px;
+          transition: .7s;
+      }
+      .on{
+          display: none;
+      }
+      #btn:checked ~ .on{
+          display: block;
+      }
+    #btn:checked ~ .off{
+        display: none;
+    }
+    #btn:checked ~ label span{
+        transform: translateX(45px);
+    }
+    #btn:checked ~ h1{
+        color: rgb(238, 214, 214);
+        transition: .1s;
+    }
+    h1{
+        text-align: center;
+        margin-top: -310px;
+        font-size: 6em;
+    }
+
+
+
+</style>
+    
+<body>
+     
+    <input type="checkbox" id="btn"/>
+    <label for="btn">
+        <span></span>
+
+    </label>
+    
+    <div class="off">
+        <img src="off.jpg" alt="">
+
+    </div>
+
+    <div class="on">
+        <img src="on.jpg" alt="">
+
+    </div>
+
+    <h1>We Are Brighter</h1>
+
+  
+
+
+
+
+</body>
+</html>
