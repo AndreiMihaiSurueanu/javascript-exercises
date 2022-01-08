@@ -1,0 +1,48 @@
+/* Styling for double navbar */
+	html,body,header{
+		height: 150vh;
+		font-family: 'josefin sans' , sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	.view{
+		height: 100%;
+		background: url(bg.jpg) no-repeat center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.view h1{
+		position: absolute;
+		top: 55%;
+		left: 30%;
+	}
+.fixed-top{
+	padding: 20px 0 20px 8px;
+}
+.fixed-top .navbar-nav li a{
+	font-size: 19px;
+	color: white !important;
+	transition: .5s ease-in-out;
+}
+.fixed-top .navbar-nav li a:hover{
+	color: yellow !important;
+}
+
+@media screen  and (max-width:767px){
+	.navbar-dark{
+		background-color: orange !important;
+	}
+
+}
+
+#main-bar{
+	position: absolute;
+	width: 100%;
+	top: 13%;
+	position: fixed;
+	z-index: 1;
+}
+#main-bar .nav-item{
+	margin-left: 10px;
+	font-size: 17px;
+}
