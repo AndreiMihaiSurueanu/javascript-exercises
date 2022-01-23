@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle Button</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="bodybg">
+   
+   <h1 id="heading">Toggle Button with Day Night Mode</h1>
+	<div class="main" onclick="togglefunc()">
+		<div id="toggle" ></div>
+	</div>
+<script type="text/javascript">
+
+	function togglefunc(){
+	  var toggle = document.getElementById("toggle").getAttribute("style");
+
+	if (toggle == "transform: translateX(0px);" ) {
+     document.getElementById("toggle").style.transform = "translateX(60px)";
+     document.getElementById("bodybg").style.backgroundColor ="#615c5c";
+     document.getElementById("heading").style.color ="#fff";
+	}
+
+	else {
+     document.getElementById("toggle").style.transform = "translateX(0px)";
+     document.getElementById("bodybg").style.backgroundColor ="#dbd7d7";
+     document.getElementById("heading").style.color ="#000";
+	}
+}
+</script>
+
+</body>
+</html>
