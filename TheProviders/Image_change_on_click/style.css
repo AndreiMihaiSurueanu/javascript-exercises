@@ -1,0 +1,37 @@
+/*Styling*/
+
+body{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-content: center;
+	display: flex;
+}
+
+.button-container{
+	position: absolute;
+	bottom: 25%;
+}
+button{
+	width: 5em;
+	height: 2em;
+	outline: none;
+	border: 1px solid black;
+	cursor: pointer;
+	transition: .2s;
+}
+button:hover{
+	box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+}
+button:focus{
+	transform: translateY(-8px);
+}
+.white-button{
+	background-color: #fff;
+}
+.pink-button{
+	background-color: pink;
+}
+.black-button{
+	background-color: #000;
+}

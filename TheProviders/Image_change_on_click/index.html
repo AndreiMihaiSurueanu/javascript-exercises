@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image change on click</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<img id="change-image" src="img3.jpg" alt="bicycleImage">
+
+<div class="button-container">
+	<button class="white-button"></button>
+	<button class="pink-button"></button>
+	<button class="black-button"></button>
+	
+</div>
+
+<script type="text/javascript">
+	
+	$(document).ready(function($){
+      
+      $('.white-button').on({
+      	'click': function(){
+      		$('#change-image').attr('src','img1.jpg');
+      	}
+      });
+
+      $('.pink-button').on({
+      	'click': function(){
+      		$('#change-image').attr('src','img2.jpg');
+      	}
+      });
+
+      $('.black-button').on({
+      	'click': function(){
+      		$('#change-image').attr('src','img3.jpg');
+      	}
+      });
+	});
+
+</script>
+
+</body>
+</html>
