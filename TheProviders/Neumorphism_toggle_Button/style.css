@@ -1,0 +1,66 @@
+/*Styling for Neumorphism Button*/
+body{
+  background: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+#chk{
+  text-align: center;
+  visibility: hidden;
+   border-radius: 23px;
+   z-index: -1;
+}
+#chk:checked{
+  transform: skew(30deg);
+}
+.toggle{
+  box-shadow: -7px -7px 20px 0px #fff9,
+              -4px -4px 5px 0px #fff9,
+              7px 7px 20px 0px #0002,
+              4px 4px 5px 0px #0001,
+              inset 0px 0px 0px 0px #fff9,
+              inset 0px 0px 0px 0px #fff1,
+              inset 0px 0px 0px 0px #fff9,
+              inset 0px 0px 0px 0px #fff1;
+   transition: box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+   padding: 10px;
+   cursor: pointer;
+   z-index: 1;
+   border-radius: 10px;           
+
+}
+
+.active_button .toggle{
+  box-shadow: 0px 0px 0px 0px #fff9,
+               0px 0px 0px 0px #fff9,
+               0px 0px 0px 0px #fff1,
+               0px 0px 0px 0px #fff1,
+               inset -7px -7px 20px 0px #fff9,
+               inset -4px -4px 5px 0px #fff9,
+               inset 7px 7px 20px 0px #0003,
+               inset 4px 4px 5px 0px #0001;
+}
+
+.bar1 , .bar2 , .bar3{
+  border-radius: 4px;
+  width: 40px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: .3s;
+}
+.change .bar1{
+  transform: rotate(-45deg) translate(-9px,6px);
+  transition-delay: .3s;
+}
+.change .bar2{
+  opacity: 0;
+  transition-delay: .3s;
+}
+.change .bar3{
+  transform: rotate(45deg) translate(-8px,-8px);
+  transition-delay: .3s;
+}
