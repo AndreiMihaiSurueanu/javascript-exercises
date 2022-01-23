@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Animated Header on Scroll with jQuery Demo</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Category</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Faq</a></li>
+    </ul>
+  </nav>
+  
+</div>
+
+<img src="img1.jpg" width="100%" height="600px" style="margin-top: 80px;">
+
+<section class="content">
+   <p>Deserunt exercitation veniam id velit dolor ullamco ullamco reprehenderit velit exercitation proident minim elit excepteur eiusmod eiusmod.</p>
+
+   <p>Irure laborum dolor culpa sit dolor velit excepteur ut exercitation laboris amet ex deserunt ut amet sed ut consequat velit nulla velit magna sint occaecat qui nulla irure culpa non id est veniam commodo sint ea in irure velit exercitation adipisicing dolor in cupidatat enim aliqua anim laboris in esse consectetur pariatur amet adipisicing in et pariatur ea amet ad ullamco enim cillum tempor ea adipisicing dolor exercitation fugiat commodo amet anim id et sed velit proident ut ut irure ut fugiat cillum proident nulla ex officia in ad non tempor reprehenderit voluptate dolor ut reprehenderit duis qui laborum aliqua duis excepteur eu eiusmod exercitation et quis irure ad est cupidatat cillum laboris in exercitation esse amet dolor occaecat dolore veniam aliqua ut magna mollit ea anim ullamco elit sit non ut in irure do ut qui veniam consequat eu in do aliquip dolore velit cupidatat ea sint dolore tempor magna culpa non commodo nisi commodo qui dolor commodo fugiat qui pariatur minim eiusmod pariatur minim in ex velit quis eu et deserunt eiusmod in velit amet irure sed in exercitation laboris id ea sint excepteur id excepteur adipisicing ea voluptate culpa eiusmod elit sunt dolore exercitation ut deserunt sunt.</p>
+
+   <p>In eiusmod nostrud mollit dolore in exercitation proident nostrud dolore labore duis et pariatur aliqua quis officia nisi quis elit eiusmod eu eiusmod proident et sit incididunt quis consectetur amet amet culpa esse.</p>
+</section>
+    
+    <script type="text/javascript">
+      
+      $(document).ready(function(){
+        var shrinkheader = 150;
+        $(window).scroll(function(){
+          var scroll = getCurrentScroll();
+          if (scroll >=  shrinkheader) {
+            $('.header').addClass('shrink');
+          } else {
+            $('.header').removeClass('shrink');
+          }
+        });
+        function getCurrentScroll(){
+          return window.pageYoffset || document.documentElement.scrollTop;
+        }
+      });
+
+    </script>
+</body>
+</html>
