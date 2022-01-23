@@ -1,0 +1,14 @@
+/*Scroll Top Button in Html and CSS*/
+body , html{
+	scroll-behavior: smooth;
+}
+
+#Button{
+	position: absolute;
+	top: 76%;
+	left: 82%;
+	position: fixed;
+	width: 100px;
+	display: none;
+}
+
