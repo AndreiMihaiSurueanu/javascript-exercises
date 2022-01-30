@@ -15,16 +15,29 @@
 			body {
 				background-color: midnightblue;
 			}
-			.data {
-				color: cornflowerblue;
+			.container {
+				display: grid;
+				place-items: center;
+			}
+			a {
+				margin: .2em;
+				padding: .2em;
+				text-decoration: none;
+				border-radius: 10px;
+				background: burlywood;
+				color: midnightblue;
+				box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+			}
+			a:hover {
+				background: #62baea;
+				color: white;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container"></div>
-		<div class="data"></div>
 		<script>
-			const dataDiv = document.querySelector(".data");
+			const dataDiv = document.querySelector(".container");
 			let paths;
 			fetch("paths.json")
 				.then((res) => res.json())
