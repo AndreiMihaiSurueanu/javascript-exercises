@@ -23,7 +23,7 @@ function fromDir(startPath, filter) {
 			fromDir(filename, filter); //recurse
 		} else if (filename.indexOf(filter) >= 0) {
 			console.log("-- found: ", filename);
-			paths.paths.push(filename)
+			paths.paths.push(filename.replace(/\\/g,'/'))
 			continue;
 		}
 	}
