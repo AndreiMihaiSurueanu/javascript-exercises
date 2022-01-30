@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./jhep-coursera-course4.jfif" type="image/x-icon" />
-    <title>JavaScript Exercises</title>
-    <script src='js.js'></script>
-    <style>
-        body{
-            background-color: midnightblue;
-        }
-        .data {
-            color: cornflowerblue;
-        }
-    </style>
-</head>
-<body>
-    <div class="container"></div>
-    <div class="data"></div>
-    <script>
-        const dataDiv = document.querySelector('.data')
-        let paths;
-        fetch("paths.json")
-        .then((res) => res.json())
-        .then((data) => {
-            paths = data.paths;
-            paths?.forEach(path => {
-                // console.log(path);
-                const link = document.createElement("a")
-                link.setAttribute("href", path)
-                link.append(path);
-                console.log(link);
-                dataDiv.append(link)
-            });
-        });
-        </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="./jhep-coursera-course4.jfif"
+			type="image/x-icon"
+		/>
+		<title>JavaScript Exercises</title>
+		<script src="js.js"></script>
+		<style>
+			body {
+				background-color: midnightblue;
+			}
+			.data {
+				color: cornflowerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container"></div>
+		<div class="data"></div>
+		<script>
+			const dataDiv = document.querySelector(".data");
+			let paths;
+			fetch("paths.json")
+				.then((res) => res.json())
+				.then((data) => {
+					paths = data.paths;
+					paths?.forEach((path) => {
+						// console.log(path);
+						const link = document.createElement("a");
+						link.setAttribute("href", path);
+						link.append(path);
+						console.log(link);
+						dataDiv.append(link);
+					});
+				});
+		</script>
+	</body>
 </html>
