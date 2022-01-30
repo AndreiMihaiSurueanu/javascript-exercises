@@ -22,7 +22,7 @@ function fromDir(startPath, filter) {
 		if (stat.isDirectory()) {
 			fromDir(filename, filter); //recurse
 		} else if (filename.indexOf(filter) >= 0) {
-			console.log("-- found: ", filename);
+			// console.log("-- found: ", filename);
 			paths.paths.push(filename.replace(/\\/g,'/'))
 			continue;
 		}
