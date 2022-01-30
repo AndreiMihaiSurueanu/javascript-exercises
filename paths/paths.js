@@ -14,11 +14,11 @@ function fromDir(startPath, filter) {
 		return;
 	}
 
-	var files = fs.readdirSync(startPath);
-	for (var i = 0; i < files.length; i++) {
-		var filename = path.join(startPath, files[i]);
+	const files = fs.readdirSync(startPath);
+	for (let i = 0; i < files.length; i++) {
+		const filename = path.join(startPath, files[i]);
 		if(files[i] === '.git') continue;
-		var stat = fs.lstatSync(filename);
+		const stat = fs.lstatSync(filename);
 		if (stat.isDirectory()) {
 			fromDir(filename, filter); //recurse
 		} else if (filename.indexOf(filter) >= 0) {
