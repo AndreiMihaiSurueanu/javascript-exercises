@@ -12,21 +12,33 @@
 		<title>JavaScript Exercises</title>
 		<script src="js.js"></script>
 		<style>
+			* {
+				margin: 0;
+			}
 			body {
 				background-color: midnightblue;
 			}
 			.container {
+				width: 100vw;
 				display: grid;
 				place-items: center;
 			}
-			a {
-				margin: .2em;
+			.container div {
+				margin: .5em;
 				padding: .2em;
-				text-decoration: none;
+				word-wrap: break-word;
 				border-radius: 10px;
 				background: burlywood;
 				color: midnightblue;
 				box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+			}
+			a {
+				height: fit-content;
+				text-size-adjust: 10%;
+				word-wrap: break-word;
+				text-decoration: none;
+				color: midnightblue;
+				overflow: hidden;
 			}
 			a:hover {
 				background: #62baea;
@@ -37,7 +49,7 @@
 	<body>
 		<div class="container"></div>
 		<script>
-			const dataDiv = document.querySelector(".container");
+			const container = document.querySelector(".container");
 			let paths;
 			fetch("paths.json")
 				.then((res) => res.json())
@@ -46,10 +58,12 @@
 					paths?.forEach((path) => {
 						// console.log(path);
 						const link = document.createElement("a");
+						const linkDiv = document.createElement("div");
 						link.setAttribute("href", path);
 						link.append(path);
 						console.log(link);
-						dataDiv.append(link);
+						linkDiv.append(link);
+						container.append(linkDiv);
 					});
 				});
 		</script>
