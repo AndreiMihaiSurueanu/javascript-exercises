@@ -1,8 +1,35 @@
 const fs = require("fs");
-const files = fs.readdirSync("../");
+const path = require("path");
+// const files = fs.readdirSync("../");
 const paths = {
-	paths: files,
+	paths: [],
 };
+
+// https://stackoverflow.com/questions/25460574/find-files-by-extension-html-under-a-folder-in-nodejs
+function fromDir(startPath, filter) {
+	//console.log('Starting from dir '+startPath+'/');
+
+	if (!fs.existsSync(startPath)) {
+		console.log("no dir ", startPath);
+		return;
+	}
+
+	var files = fs.readdirSync(startPath);
+	for (var i = 0; i < files.length; i++) {
+		var filename = path.join(startPath, files[i]);
+		if(files[i] === '.git') continue;
+		var stat = fs.lstatSync(filename);
+		if (stat.isDirectory()) {
+			fromDir(filename, filter); //recurse
+		} else if (filename.indexOf(filter) >= 0) {
+			console.log("-- found: ", filename);
+			paths.paths.push(filename)
+			continue;
+		}
+	}
+}
+
+fromDir("../", ".html");
 
 // https://stackoverflow.com/questions/36856232/write-add-data-in-json-file-using-node-js
 fs.writeFile(
@@ -15,4 +42,4 @@ fs.writeFile(
 		}
 	}
 );
-console.log(files);
+console.log(paths);
