@@ -29,7 +29,7 @@ function fromDir(startPath, filter) {
 	}
 }
 
-fromDir("../", ".html");
+fromDir(".", ".html");
 
 // https://stackoverflow.com/questions/36856232/write-add-data-in-json-file-using-node-js
 fs.writeFile(
