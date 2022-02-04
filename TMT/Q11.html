@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q11</title>
+</head>
+<body>
+	We have the following HTML/CSS code:
+
+	<xmp>
+  <style>
+      p { color: red; }
+
+      @media (max-width: 400px) {
+	  p { color: blue; }
+      }
+      @media (min-width: 800px) {
+	  p { color: green; }
+      }
+      @media (min-width: 200px) and (max-width: 600px) {
+	  p { color: black; }
+      }
+  </style>
+
+  <p>Some text</p>
+	</xmp>
+	<p>1. When the screen width is above <b>800px</b>.</p>
+	<p>2. When the screen width is above below <b>400px</b> or above <b>600px</b>.</p>
+	<p>3. ✅ When the screen width is between <b>600px</b> and <b>800px</b>.</p>
+	<p>4. When the screen width is below <b>200px</b>.</p>
+	<p>5. Never.</p>
+	<i><b>Please select one answer.</b></i>
+
+	<style>
+		p { color: red; }
+
+		@media (max-width: 400px) {
+		p { color: blue; }
+		}
+		@media (min-width: 800px) {
+		p { color: green; }
+		}
+		@media (min-width: 200px) and (max-width: 600px) {
+		p { color: black; }
+		}
+	</style>
+
+	<p>Some text</p>
+
+
+</body>
+</html>
