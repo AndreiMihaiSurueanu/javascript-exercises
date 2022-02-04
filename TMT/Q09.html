@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q09</title>
+</head>
+<body>
+	Given this fragment of HTML code:
+
+	<xmp>
+    <link type="text/css" href="style.css" />
+    <style type="text/css">
+	div { height: 10px!important; }
+    </style>
+    <div style="height: 15px;"></div>
+	</xmp>
+
+	And this style.css:
+
+	<pre>
+    div { height: 20px;}
+	</pre>
+
+	What will the height of the <code><i><b>&lt;div></b></i></code> element be?
+	<br>
+	<br>
+	<p>1. 15px</p>
+	<p>2. 20px</p>
+	<p>3. ✅10px</p>
+	<p>4. 30px</p>
+	<i><b>Please select one answer.</b></i>
+	<br>
+	<br>
+	<link type="text/css" href="style.css" />
+	<style type="text/css">
+		div { height: 10px!important; }
+	</style>
+	<div style="height: 15px;"></div>
+
+	<style>
+		div { 
+			background-color: aliceblue;
+		}
+	</style>
+	The link tag element is missing <code><i><b>rel="stylesheet"</b></i></code>
+
+</body>
+</html>
