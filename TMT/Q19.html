@@ -7,45 +7,84 @@
 	<title>TMT Q19</title>
 </head>
 <body>
-	<!-- Which of the following code samples are valid? -->
+	Which of the following code samples are valid?<br><br>
 
-	<!-- <div class="abc">
-		<p>
-			Lorem ipsum <i>dolor</i> sit amet, <small>consectetuer adipiscing</small> 
-			elit, sed diam nonummy nibh <b>euismod tincidunt</b> ut 
-			<span>laoreet dolore magna aliquam</span> erat volutpat.
-		</p>
-	</div> -->
+	1. ✅
+	<xmp>
+  <div class="abc">
+      <p>
+          Lorem ipsum <i>dolor</i> sit amet, <small>consectetuer adipiscing</small> 
+          elit, sed diem nonummy nibh <b>euismod tincidunt</b> ut 
+          <span>laoreet dolore magna aliquam</span> erat volutpat.
+      </p>
+  </div>
+	</xmp>
+
+	2. ✅
+	<xmp>
+  <p class="abc">
+      <div>
+          Lorem ipsum dolor sit amet, <small>consectetuer adipiscing</small> elit, 
+          sed diem nonummy nibh <b>euismod tincidunt</b> ut <span>laoreet dolore 
+          magna aliquam</span> erat volutpat.
+      </div>
+  </p>
+	</xmp>
+
+	3. ✅
+	<xmp>
+  <div class="abc">
+      <p>
+          Lorem ipsum <i>dolor</i> sit amet, <small>consectetuer adipiscing</small> 
+          elit, sed diem nonummy nibh <b>euismod tincidunt</b> ut 
+          <p>laoreet dolore magna aliquam</p> erat volutpat.
+      </p>
+  </div>
+	</xmp>
 
 
-	<!-- <p class="abc">
-		<div>
-			Lorem ipsum dolor sit amet, <small>consectetuer adipiscing</small> elit, 
-			sed diam nonummy nibh <b>euismod tincidunt</b> ut <span>laoreet dolore 
-			magna aliquam</span> erat volutpat.
-		</div>
-	</p> -->
+	4. ✅
+	<xmp>
+  <p class="abc">
+      <ul>
+          <li>Text1</li>
+          <li>Text2</li>
+      </ul>
+  </p>
+	</xmp>
 
 
-	<!-- <div class="abc">
-		<p>
-			Lorem ipsum <i>dolor</i> sit amet, <small>consectetuer adipiscing</small> 
-			elit, sed diam nonummy nibh <b>euismod tincidunt</b> ut 
-			<p>laoreet dolore magna aliquam</p> erat volutpat.
-		</p>
-	</div> -->
-
-
-	<!-- <p class="abc">
-		<ul>
-			<li>Text1</li>
-			<li>Text2</li>
-		</ul>
-	</p> -->
-
+	<i><b>Please select all correct answers (one or multiple)</b></i>
 
 	<!-- Answer: they are all valid... 🤷‍♂️ -->
+	<h3>1.</h3>
+	<div class="abc">
+		<p>
+			Lorem ipsum <i>dolor</i> sit amet, <small>consectetuer adipiscing</small> 
+			elit, sed diem nonummy nibh <b>euismod tincidunt</b> ut 
+			<span>laoreet dolore magna aliquam</span> erat volutpat.
+		</p>
+	</div>
 
+	<h3>2.</h3>
+	<p class="abc">
+		<div>
+			Lorem ipsum dolor sit amet, <small>consectetuer adipiscing</small> elit, 
+			sed diem nonummy nibh <b>euismod tincidunt</b> ut <span>laoreet dolore 
+			magna aliquam</span> erat volutpat.
+		</div>
+	</p>
+
+	<h3>3.</h3>
+	<div class="abc">
+		<p>
+			Lorem ipsum <i>dolor</i> sit amet, <small>consectetuer adipiscing</small> 
+			elit, sed diem nonummy nibh <b>euismod tincidunt</b> ut 
+			<p>laoreet dolore magna aliquam</p> erat volutpat.
+		</p>
+	</div>
+
+	<h3>4.</h3>
 	<p class="abc">
 		<ul>
 			<li>Text1</li>
