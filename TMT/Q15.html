@@ -7,7 +7,31 @@
 	<title>TMT Q15</title>
 </head>
 <body>
-	<!-- What color will be applied to the text? -->
+	What color will be applied to the text?
+
+	<xmp>
+  <style>
+      span.text {color: red;}
+      .text span {color: blue}
+      div {color: green}
+      div span {color: black}
+      p span {color:yellow}
+  </style>
+
+  <div>
+      <p>
+          <span class="text"><span>Text</span></span>
+      </p>
+  </div>	
+	</xmp>
+	
+	<p>1. Red</p>
+	<p>2. ✅ Blue</p>
+	<p>3. Green</p>
+	<p>4. Black</p>
+	<p>5. Yellow</p>
+	<i><b>Please select one answer.</b></i>
+
 	<!-- The answer is blue 😁 -->
 	<style>
 		span.text {color: red;}
