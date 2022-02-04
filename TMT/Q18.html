@@ -7,15 +7,26 @@
 	<title>TMT Q18</title>
 </head>
 <body>
-	<!-- Given the following markup, which selector would give all direct 
-		children (the "p" and "ul" elements) a red border, but not the 
-		grandchildren (the "li" elements)? -->
-	<!-- Options: 
-		.container p ul
-		.container p, ul
-		.container + *
-		.container > *
-	 -->
+	Given the following markup, which selector would give all direct 
+	children (the "p" and "ul" elements) a red border, but not the 
+	grandchildren (the "li" elements)?
+
+	<xmp>
+  <div class="container">
+      <p>Paragraph 1</p>
+      <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+      </ul>
+  </div>
+	</xmp>
+
+	<p>1. .container p ul</p>
+	<p>2. .container p, ul</p>
+	<p>3. .container + *<p>
+	<p>4. ✅ .container > *<p>
+	<i><b>Please select one answer.</b></i>
+
 	<!-- The answer is .container > * 😁 -->
 	<style>
 		.container > * {border: 1px solid red;}
