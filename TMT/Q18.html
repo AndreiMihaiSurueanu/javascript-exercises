@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMT Q18</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q18</title>
 </head>
 <body>
-    <!-- Given the following markup, which selector would give all direct 
-        children (the "p" and "ul" elements) a red border, but not the 
-        grandchildren (the "li" elements)? -->
-    <!-- Options: 
-        .container p ul
-        .container p, ul
-        .container + *
-        .container > *
-     -->
-    <!-- The answer is .container > * 😁 -->
-    <style>
-        .container > * {border: 1px solid red;}
-    </style>
-    <div class="container">
-        <p>Paragraph 1</p>
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ul>
-    </div>
+	<!-- Given the following markup, which selector would give all direct 
+		children (the "p" and "ul" elements) a red border, but not the 
+		grandchildren (the "li" elements)? -->
+	<!-- Options: 
+		.container p ul
+		.container p, ul
+		.container + *
+		.container > *
+	 -->
+	<!-- The answer is .container > * 😁 -->
+	<style>
+		.container > * {border: 1px solid red;}
+	</style>
+	<div class="container">
+		<p>Paragraph 1</p>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ul>
+	</div>
 </body>
 </html>
