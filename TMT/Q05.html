@@ -11,6 +11,7 @@
 		columns of equal width?
 	</p>
 	<img src="Q05.png" alt="Grid with 4 columns of equal width" style="width: 400px;">
+	<input type="Color" id="Color" value="#828385">
 
 <pre>.grid-equal-columns {
 	display: grid;
@@ -23,6 +24,26 @@
 	<p>5. columns: 4;</p>
 	<p>6. grid-columns: 25% 4;</p>
 	<i><b>Please select one answer.</b></i>
+
+	<div class="grid-equal-columns">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<style>
+		.grid-equal-columns {
+			width: 80vw;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.grid-equal-columns div {
+			height: 250px;
+			background-color: #D2DBF2;
+			border: 2px solid #708AD0;
+		}
+	</style>
 
 </body>
 </html>
