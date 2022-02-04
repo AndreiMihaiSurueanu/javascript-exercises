@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMT Q01</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TMT Q01</title>
+	</head>
+	<body>
+		<!-- https://stackoverflow.com/questions/2820453/display-html-snippets-in-html -->
 
-    <!-- https://stackoverflow.com/questions/2820453/display-html-snippets-in-html -->
+		<p>
+			Which of the following is the valid method for providing
+			multiple-resolution images to different devices?
+		</p>
 
-    <p>    Which of the following is the valid method for providing 
-        multiple-resolution images to different devices?
-    </p>
+		1.
+		<xmp><picture src="640w.jpg"
 
-    1.
-    <xmp><picture src="640w.jpg"
+mobile="320w.jpg"
+tablet="480w.jpg"
+desktop="640w.jpg"></xmp>
 
-    mobile="320w.jpg"
-    tablet="480w.jpg"
-    desktop="640w.jpg"></xmp>
+		2.
+<xmp><img src="640w.jpg"
 
-    2.
-    <xmp><img src="640w.jpg"
+mobile="320w.jpg"
+tablet="480w.jpg"
+desktop="640w.jpg"></xmp>
 
-    mobile="320w.jpg"
-    tablet="480w.jpg"
-    desktop="640w.jpg"></xmp>
+		3. ✅
+<xmp><img src="640w.jpg"
 
-    3. ✅
-    <xmp><img src="640w.jpg"
+srcset="320w.jpg,
+480w.jpg 1.5x,
+640w.jpg 2x">
+</xmp>
+		4.
+		<xmp><img src="640w.jpg, 480w.jpg, 320w.jpg"></xmp>
 
-    srcset="320w.jpg,
-    480w.jpg 1.5x,
-    640w.jpg 2x">
-    </xmp>
-    4.
-    <xmp><img src="640w.jpg, 480w.jpg, 320w.jpg"></xmp>
-
-    Article
-    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive_images</a>
-
-</body>
+		Article
+		<a
+			href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+			>Responsive_images</a
+		>
+	</body>
 </html>
