@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q13</title>
+</head>
+<body>
+	Assuming the following CSS, and using the Default
+	CSS Box Model, which statement is true:
+
+	<pre>
+  .box {
+      width: 400px;
+      padding: 10px;
+      border: 1px;
+      margin: 20px;
+  }
+	</pre>
+	<p>1. ✅ The width defines the size of the content area.<br>
+		Padding, border, and margin are then added to that 
+		width to make the total size the item takes up on screen.<br>
+		Therefore, the total width of this box will be <b>462px</b>.
+	</p>
+	<p>2. The width defines the content area plus padding 
+		and border, but not margins.<br>
+		The width of the box will therefore be <b>422px</b>.
+	</p>
+	<p>3. The width defines the total width of the area used by 
+		the element, including margins, padding, and borders.<br>
+		The width of the box will be <b>400px</b>.
+	</p>
+	<i><b>Please select one answer.</b></i>
+
+	<style>
+		.box {
+			width: 400px;
+			padding: 10px;
+			border: 1px;
+			margin: 20px;
+			background: red;
+		}
+	</style>
+	<div class="box"></div>
+
+</body>
+</html>
