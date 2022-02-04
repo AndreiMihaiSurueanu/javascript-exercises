@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q12</title>
+</head>
+<body>
+	We have the following HTML/CSS code:
+
+	<xmp>
+  <style>
+      .container {
+	  display: flex;
+	  border: 5px solid;
+      }
+      .box {
+	  height: 100px;
+	  width: 100px;
+	  background: red;
+      }
+  </style>
+  <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+  </div>
+	</xmp>
+	What CSS declaration should we add to the 
+	<b>.container</b> in order to obtain the following layout:
+	<img src="Q12.png" alt="flex box container with two red boxes" style="width: 100%;">
+	<p>1. <code><b>justify-content: space-inside;</b></code></p>
+	<p>2. ✅ <code><b>justify-content: space-between;</b></code></p>
+	<p>3. <code><b>align-items: space-inside;</b></code></p>
+	<p>4. <code><b>align-items: space-between;</b></code></p>
+	<i><b>Please select one answer.</b></i>
+
+	<style>
+		.container {
+			display: flex;
+			border: 5px solid;
+			justify-content: space-between;
+		}
+		.box {
+			height: 100px;
+			width: 100px;
+			background: red;
+		}
+	</style>
+	<div class="container">
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+
+</body>
+</html>
