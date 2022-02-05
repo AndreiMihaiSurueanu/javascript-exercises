@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q36</title>
+</head>
+<body>
+	After the following JavaScript code is run which of the 
+	following are true?<br>
+
+	<img src="Q36.png" alt="JavaScript function code snippet">
+
+	<p>1. ✅ <b>a</b> is 1</p>
+
+	<p>2. <b>a</b> is 2</p>
+
+	<p>3. ✅ <b>b</b> is "old string"</p>
+
+	<p>4. <b>b</b> is "new string"</p>
+
+	<p>5. <b>c</b> is {"key":"old value"}</p>
+
+	<p>6. ✅ <b>c</b> is {"key":"new value"}</p>
+
+	<i><b>Please select all correct answers (one or multiple)</b></i>
+
+	<pre>
+function foo(a, b, c) {
+	a++;
+	b = "new string";
+	c["key"] = "new value";
+}
+
+var a = 1,
+	b = "old string",
+	c = {"key" : "old value"};
+
+foo(a, b, c);
+	</pre>
+
+	<script>
+		function foo(a, b, c) {
+			a++;
+			b = "new string";
+			c["key"] = "new value";
+		}
+
+		var a = 1,
+			b = "old string",
+			c = {"key" : "old value"};
+
+		foo(a, b, c);
+	</script>
+
+</body>
+</html>
