@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q22</title>
+</head>
+<body>
+	What is the output of this JavaScript?
+
+	<pre>
+  function f(x) {
+      x += 1;
+  }
+
+  function g(x) {
+      x.value *= 5;
+  }
+
+  var a;
+  var b = 1;
+  var c = { value: 2 };
+  var d = c;
+ 
+  f(a);
+  f(b);
+  g(d);
+
+  console.log(a, b, c.value, d.value);
+	</pre>
+
+	<p>1. undefined 1 2 2</p>
+
+	<p>2. 1 2 2 10</p>
+
+	<p>3. NaN 2 2 10</p>
+
+	<p>4. ✅ undefined 1 10 10</p>
+
+	<i><b>Please select one answer.</b></i><br><br>
+
+	<script>
+		function f(x) {
+			x += 1;
+		}
+
+		function g(x) {
+			x.value *= 5;
+		}
+
+		var a;
+		var b = 1;
+		var c = { value: 2 };
+		var d = c;
+
+		f(a);
+		f(b);
+		g(d);
+
+		console.log(a, b, c.value, d.value);
+	</script>
+
+</body>
+</html>
