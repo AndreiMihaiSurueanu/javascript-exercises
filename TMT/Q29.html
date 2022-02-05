@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q28</title>
+</head>
+<body>
+	After the following JavaScript code is run which 
+	of the following statements will evaluate to true?
+
+	<br><br>
+
+	<img src="Q29.png" alt="Fragment of JavaScript code">
+
+	<p>1. person.dateOfBirth.toDateString() === personClone.dateOfBirth.toDateString()</p>
+	<p>2. person === personClone</p>
+	<p>3. ✅ person.firstName === personClone.firstName<p>
+	<p>4. ✅ person.measurements['weight'] === personClone.measurements['weight']<p>
+	<i><b>Please select all correct answers (one or multiple)</b></i>
+
+	<xmp>
+var Person = function(firstName, lastName, dateOfBirth, measurements) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.dateOfBirth =dateOfBirth;
+	this.measurements = measurements;
+}
+
+person = new Person('Jim', 'Perice', new Date(2013, 2, 12), {weight: '70kg'})
+personClone = JSON.parse(JSON.stringify(person))
+	</xmp>
+
+</body>
+</html>
