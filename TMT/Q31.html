@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q31</title>
+</head>
+<body>
+	Wich of the following can be used to handle the user 
+	clicking on a node?
+
+	<p>1. node.onclick(myFunction)</p>
+	<p>2. ✅ node.addEventListener("click", myFunction, false)</p>
+	<p>3. node.addEventListener("onclick", myFunction, false)</p>
+	<p>4. node.attachEvent("onclick", myFunction)</p>
+	<i><b>Please select all correct answers (one or multiple)</b></i>
+
+	<div>Click me</div>
+
+	<pre>
+let myFunction = () => {
+	div[0].innerText = 'Clicked'
+	// console.log(this);
+}
+let div = document.getElementsByTagName('div')
+// div[0].onclick = myFunction;
+// div[0].onclick(myFunction);
+div[0].addEventListener('click', myFunction, false)
+// div[0].addEventListener('onclick', myFunction, false)
+// div[0].attachEvent('onclick', myFunction)
+	</pre>
+
+	<script>
+		let myFunction = () => {
+			div[0].innerText = 'Clicked'
+			// console.log(this);
+		}
+		let div = document.getElementsByTagName('div')
+		// div[0].onclick = myFunction;
+		// div[0].onclick(myFunction);
+		div[0].addEventListener('click', myFunction, false)
+		// div[0].addEventListener('onclick', myFunction, false)
+		// div[0].attachEvent('onclick', myFunction)
+	</script>
+
+</body>
+</html>
