@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q32</title>
+</head>
+<body>
+	Which of the following would be the correct way to define 
+	and invoke a method that will display the "FirstName" 
+	property of a "person" object?
+
+	<p>1. <pre>person.ShowName = function() { alert(sender.FirstName); }
+person.ShowName();
+	</pre></p>
+
+	<p>2. <pre>person.ShowName = function(sender) { alert(sender.FirstName); }
+person.ShowName();
+	</pre></p>
+
+	<p>3. ✅ <pre>person.ShowName = function() { alert(this.FirstName); }
+person.ShowName();
+	</pre></p>
+
+	<p>4. <pre>person.ShowName = new function() { alert(FirstName); }
+person.ShowName();
+	</pre></p>
+
+	<p>5. <pre>person.ShowName = Function.Create({alert(FirstName);});
+person.ShowName();
+	</pre></p>
+
+	<p>6. You cannot define a method for the object in JavaScript.</p>
+
+	<i><b>Please select one answer.</b></i><br><br>
+
+	<script>
+		let person = {}
+		person.FirstName = 'Jack'
+		// person.ShowName = function() { alert(sender.FirstName); }
+		// person.ShowName = function(sender) { alert(sender.FirstName); }
+		person.ShowName = function() { alert(this.FirstName); }
+		// person.ShowName = new function() { alert(FirstName); }
+		// person.ShowName = Function.Create({alert(FirstName);});
+		person.ShowName();
+	</script>
+
+</body>
+</html>
