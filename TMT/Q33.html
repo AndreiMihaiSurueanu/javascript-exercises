@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q33</title>
+</head>
+<body>
+	The following code is intended to add five identical boxes
+	containig links to the document,<br> but it doesn't work properly.
+	Why not?<br>
+
+	<img src="Q33.png" alt="JavaScript function code">
+
+	<p>1. to.appendChild() expects HTML, but from.childNodes[i] is a node object,<br>
+	so all the boxes will contain the text [Object Node].</p>
+
+	<p>2. A link's href has to be set using setAttribute(); setting the property link.href won't do anything,<br>
+	so none of the links in the boxes will point anywhere.</p>
+
+	<p>3. ✅ The same link element can't have multiple parents, so only one box ends up with a link in it.</p>
+
+	<p>4. document.createElement() reuses existing elements with the same tag,<br>
+	so only one box is added to the document.</p>
+
+	<i><b>Please select one answer.</b></i><br><br>
+
+	<pre>
+// Copies the contents of one box into another
+function copyContents(from, to) {
+	for(var i = 0; i < from.childNodes.length; i++) {
+		to.appendChild(from.childNodes[i]);
+	}
+}
+
+// Create a box to copy
+var referenceBox = document.createElement('div');
+
+var link = document.createElement('a');
+link.href = 'https://www.example.com/';
+link.textContent = 'A link';
+
+referenceBox.appendChild(link);
+
+// Add box copies to the document
+for (var i = 0; i < 5; i++) {
+	var newBox = document.createElement('div');
+	copyContents(referenceBox, newBox);
+
+	document.body.appendChild(newBox);
+}
+	</pre>
+
+	<script>
+		// Copies the contents of one box into another
+		function copyContents(from, to) {
+			for(var i = 0; i < from.childNodes.length; i++) {
+				to.appendChild(from.childNodes[i]);
+			}
+		}
+
+		// Create a box to copy
+		var referenceBox = document.createElement('div');
+
+		var link = document.createElement('a');
+		link.href = 'https://www.example.com/';
+		link.textContent = 'A link';
+
+		referenceBox.appendChild(link);
+
+		// Add box copies to the document
+		for (var i = 0; i < 5; i++) {
+			var newBox = document.createElement('div');
+			copyContents(referenceBox, newBox);
+
+			document.body.appendChild(newBox);
+		}
+	</script>
+
+</body>
+</html>
