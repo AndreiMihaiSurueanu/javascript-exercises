@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMT Q37</title>
+</head>
+<body>
+	With the following HTML and JavaScript,the alert isn't 
+	shown when you click the button. Why not?<br>
+
+	<img src="Q37.png" alt="JavaScript function code snippet">
+
+	<p>1. The setup function never runs</p>
+
+	<p>2. The setup function runs before the DOM is ready</p>
+
+	<p>3. ✅ There should be () after handleClick in the onclick attribute</p>
+
+	<p>4. ✅ handleClick should be a global function</p>
+
+	<i><b>Please select all correct answers (one or multiple)</b></i>
+
+	<xmp>
+<input type="button" value="Click Me" onclick="handleClick">
+<script>
+		function handleClick() {
+			alert("Clicked!");
+		}
+	(function setup() {
+	})();
+</script>
+	</xmp>
+	<input type="button" value="Click Me" onclick="handleClick()">
+	<script>
+		function handleClick() {
+			alert("Clicked!");
+		}
+		(function setup() {
+		})();
+	</script>
+
+</body>
+</html>
