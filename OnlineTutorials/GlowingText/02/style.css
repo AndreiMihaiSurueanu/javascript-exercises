@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bad Script', cursive;
+}
+:root {
+    --bg: #111;
+    --cube-bg: linear-gradient(#151515, #00ec00);
+    --clr-text-off: #0e3742;
+    --clr-text-glow: #00b3ff;
+    --clr-circle-3: #e41cf8;
+    --clr-btn: #47bfce;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+}
+h2 {
+	display: flex;
+	color: transparent;
+	font-size: 15vw;
+}
+h2 span {
+	animation: animate 3s linear infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+	0% {
+		color: #fff;
+		filter: blur(2px) hue-rotate(0deg);
+		text-shadow: 0 0 10px var(--clr-text-glow),
+		0 0 20px var(--clr-text-glow),
+		0 0 40px var(--clr-text-glow),
+		0 0 80px var(--clr-text-glow),
+		0 0 120px var(--clr-text-glow),
+		0 0 200px var(--clr-text-glow),
+		0 0 300px var(--clr-text-glow),
+		0 0 400px var(--clr-text-glow);
+	}
+	30%,70% {
+		color: #fff;
+		filter: blur(2px) hue-rotate(360deg);
+		text-shadow: 0 0 10px var(--clr-text-glow),
+		0 0 20px var(--clr-text-glow),
+		0 0 40px var(--clr-text-glow),
+		0 0 80px var(--clr-text-glow),
+		0 0 120px var(--clr-text-glow),
+		0 0 200px var(--clr-text-glow);
+	}
+	100% {
+		color: transparent;
+		box-shadow: none;
+		filter: blur(2px) hue-rotate(0deg);
+	}
+}
