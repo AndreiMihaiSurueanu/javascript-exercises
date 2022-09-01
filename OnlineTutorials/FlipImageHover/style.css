@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Fruktur:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #010405;
+    --bg-top: linear-gradient(to top, #010405, transparent);
+    --text: #ff9425;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+.box img {
+	width: 300px;
+	height: 400px;
+	transition: 1s;
+	position: absolute;
+	backface-visibility: hidden;
+}
+.box img:nth-child(2) {
+	transform: rotateY(180deg);
+}
+.box:hover img:nth-child(2) {
+	transform: rotateY(0deg);
+}
+.box:hover img:nth-child(1) {
+	transform: rotateY(-180deg);
+}
