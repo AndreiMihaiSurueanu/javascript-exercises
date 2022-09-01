@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #1a1a1a;
+    --icon: #ea4884;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 99.9vh;
+    display: flex;
+    background: white;
+}
+.container ::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(90deg, #fff1 0px, #fff1 1px, transparent 1px, transparent 10px), repeating-linear-gradient(0deg, #fff1 0px, #fff1 1px, transparent 1px, transparent 10px);
+    background-size: 10px 10px;
+}
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+.container .card:hover {
+    flex-grow: 3;
+    background: var(--bg);
+}
+.container .card ion-icon {
+    font-size: 15vw;
+    color: var(--bg);
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover ion-icon {
+    color: white;
+    font-size: 25vw;
+    filter: drop-shadow(0 0 10px var(--icon))
+    drop-shadow(0 0 30px var(--icon))
+    drop-shadow(0 0 60px var(--icon))
+    drop-shadow(0 0 100px var(--icon))
+    drop-shadow(0 0 150px var(--icon));
+}
