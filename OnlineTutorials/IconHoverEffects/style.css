@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root {
+    --bg: #333;
+    --indicator1: #f53b57;
+    --indicator-shadow1: #f53b5799;
+    --indicator2: #5d62fb;
+    --indicator-shadow2: #5d62fb99;
+    --indicator3: #05c46b;
+    --indicator-shadow3: #05c46b99;
+    --indicator4: #0fbcf9;
+    --indicator-shadow4: #0fbcf999;
+    --indicator5: #ffa801;
+    --indicator-shadow5: #ffa80199;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+}
+.navigation {
+    position: relative;
+    width: 350px; /* 70 * 5 = 350 */
+    height: 70px;
+}
+.navigation ul {
+    display: flex;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.navigation ul li a .icon {
+    position: relative;
+    line-height: 75px;
+    transition: 0.5s;
+    font-size: 30px;
+}
+.navigation ul li.active a .icon {
+    font-size: 20px;
+    transform: translateY(-6px);
+}
+.navigation ul li a .text {
+    position: absolute;
+    font-size: 12px;
+    color: white;
+    bottom: 20px;
+    font-weight: 400;
+    transition: 0.25s;
+    text-transform: uppercase;
+    transform: scale(0);
+}
+.navigation ul li.active a .text {
+    transform: scale(1);
+}
+.indicator {
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator {
+    background: var(--indicator1);
+    box-shadow: 0 15px 25px var(--indicator-shadow1);
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+    background: var(--indicator2);
+    box-shadow: 0 15px 25px var(--indicator-shadow2);
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+    background: var(--indicator3);
+    box-shadow: 0 15px 25px var(--indicator-shadow3);
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+    background: var(--indicator4);
+    box-shadow: 0 15px 25px var(--indicator-shadow4);
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+    background: var(--indicator5);
+    box-shadow: 0 15px 25px var(--indicator-shadow5);
+    transform: translateX(calc(70px * 4));
+}
