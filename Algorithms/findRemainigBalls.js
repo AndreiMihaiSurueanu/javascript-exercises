@@ -45,25 +45,26 @@ function findRemainingBalls(direction, strength, result = [], i = 0, j = 1) {
 	if(j === direction.length) {
 		result.unshift(i);
 		return result;
+		// return i;
 	}
+
+	findRemainingBalls(direction, strength, result, i, j);
 
 	if(direction[i] < 0) {
 		findRemainingBalls(direction, strength, result, i+1, j+1).unshift(i);
 	} else if(direction[j] < 0) {
 		if (strength[i] > strength[j]) {
-			// if(j === direction.length - 1) {
-			// 	result.push(i);
-			// }
 			findRemainingBalls(direction, strength, result, i, j+1);
 		} else if (strength[i] < strength[j]) {
-			// if(j === direction.length - 1) {
-			// 	result.push(j);
-			// }
-			findRemainingBalls(direction, strength, result, i=j, j+1);
+			findRemainingBalls(direction, strength, result, i-1, j);
+			// findRemainingBalls(direction, strength, result, j, j+1);
 		} else {
 		}
 	} else {
-		findRemainingBalls(direction, strength, result, i=j, j+1).unshift(i);
+		// j=findRemainingBalls(direction, strength, result, j, j+1);
+		// findRemainingBalls(direction, strength, result, i, j);
+		
+		findRemainingBalls(direction, strength, result, j, j+1);
 	}
 
 	return result;
