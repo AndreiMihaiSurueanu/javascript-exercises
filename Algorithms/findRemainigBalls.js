@@ -47,86 +47,25 @@ function findRemainingBalls(direction, strength, result = [], i = 0, j = 1) {
 		return result;
 	}
 
-
-	while (j < direction.length) {
-	for(; j < direction.length; j++) {
-		if(direction[i] < 0) {
-			findRemainingBalls(direction, strength, result, i+1, j+1).unshift(i);
-			result.push(i);
-			if(j === direction.length - 1) {
-				result.push(j);
-			}
-			i++;
-			j++;
-		}
-		if(direction[j] < 0) {
-			if (strength[i] > strength[j]) {
-				if(j === direction.length - 1) {
-					result.push(i);
-				}
-				j++;
-			} else if (strength[i] < strength[j]) {
-				if(j === direction.length - 1) {
-					result.push(j);
-				}
-			} else {
-				i--;
-				j++;
-			}
-		} else {
-			findRemainingBalls(direction, strength, result, i+1, j+1).unshift(i);
-		}
-	}
-
-	return result;
-
-	// return result.unshift(i);
-
-	// if(j === direction.length) return;
-	while (j < direction.length) {
-		if(direction[i] === direction[j] || direction[i] < direction[j]) {
-			i++;
-			j++;
-		} else if (strength[i] === strength[j]) {
-			return;
-		} else if (strength[i] > strength[j]) {
-			j++;
+	if(direction[i] < 0) {
+		findRemainingBalls(direction, strength, result, i+1, j+1).unshift(i);
+	} else if(direction[j] < 0) {
+		if (strength[i] > strength[j]) {
+			// if(j === direction.length - 1) {
+			// 	result.push(i);
+			// }
+			findRemainingBalls(direction, strength, result, i, j+1);
 		} else if (strength[i] < strength[j]) {
-			i--;
-		} 
-	}
-
-
-	return result;
-
-	// let result = [...Array(direction.length).keys()];
-
-	// for (let i = 0; i < direction.length; i++) {
-	// 	result.push(i)
-	// }
-
-	for (let i = 0; i < direction.length; i++) {
-
-		if (i === 0 && direction[i] === -1) {
-			result.push(i);
-			continue;
-		}
-
-		if (i === direction.length - 1){
-			break;
-		}
-
-		if (direction[i] > direction[i + 1]) {
-			if (strength[i] > strength[i + 1]) {
-				result.push(i);
-			} else if (strength[i] < strength[i + 1]) {
-				result.push(i + 1);
-			} else {
-			}
-		} else if (direction[i] < direction[i + 1]) {
+			// if(j === direction.length - 1) {
+			// 	result.push(j);
+			// }
+			findRemainingBalls(direction, strength, result, i=j, j+1);
 		} else {
 		}
+	} else {
+		findRemainingBalls(direction, strength, result, i=j, j+1).unshift(i);
 	}
+
 	return result;
 }
 
