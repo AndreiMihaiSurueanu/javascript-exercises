@@ -37,27 +37,50 @@ if both balls have colliding directions then
 if both balls have the same direction return both indexes
 if the balls have oposite directions return both indexes */
 
-function findRemainingBalls(direction, strength) {
+function findRemainingBalls(direction, strength, result = [], i = 0, j = 1) {
 	// Write your code here
 	if (direction.length !== strength.length) {
 		return -1;
 	}
-	if (direction.length === 1) {
-		return [0];
+	if(j === direction.length) {
+		result.unshift(i);
+		return result;
 	}
-	let result = [];
-	let i = 0, j = 1;
 
+
+	while (j < direction.length) {
 	for(; j < direction.length; j++) {
 		if(direction[i] < 0) {
+			findRemainingBalls(direction, strength, result, i+1, j+1).unshift(i);
 			result.push(i);
 			if(j === direction.length - 1) {
 				result.push(j);
 			}
 			i++;
+			j++;
+		}
+		if(direction[j] < 0) {
+			if (strength[i] > strength[j]) {
+				if(j === direction.length - 1) {
+					result.push(i);
+				}
+				j++;
+			} else if (strength[i] < strength[j]) {
+				if(j === direction.length - 1) {
+					result.push(j);
+				}
+			} else {
+				i--;
+				j++;
+			}
+		} else {
+			findRemainingBalls(direction, strength, result, i+1, j+1).unshift(i);
 		}
 	}
 
+	return result;
+
+	// return result.unshift(i);
 
 	// if(j === direction.length) return;
 	while (j < direction.length) {
