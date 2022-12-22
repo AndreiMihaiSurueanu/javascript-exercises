@@ -41,28 +41,32 @@ function findRemainingBalls(direction, strength) {
 	// Write your code here
 
 	let result = [...Array(direction.length).keys()];
-	let j = 1;
+	let i = 0, j = 1;
 
-	for (let i = 0; i < direction.length; i++) {
-		if(result.includes(i)) {
-			for (; j < direction.length; j++) {
-				if(direction[i] > direction[j] && result.includes(j)){
-					if (strength[i] > strength[j]) {
-						result.splice(result.indexOf(j), 1);
-					} else if (strength[i] < strength[j]) {
-						result.splice(result.indexOf(i), 1);
-						i -= 2;
-						break;
-					} else {
-						result.splice(i, 2);
-					}
-				} else if (direction[i] < 0 || (direction[i] === direction[j])) {
+	while (j < direction.length) {
+		if(i < 0) {
+			i = j;
+			j++;
+		}
+		if(result.includes(i)){
+			if(direction[i] > direction[j]){
+				if (strength[i] > strength[j]) {
+					result.splice(result.indexOf(j), 1);
 					j++;
-					break;
+				} else if (strength[i] < strength[j]) {
+					result.splice(result.indexOf(i), 1);
+					i--;
 				} else {
-					// break;
+					result.splice(result.indexOf(i), 2);
+					j++;
+					i--;
 				}
+			} else {
+				i = j;
+				j++;
 			}
+		} else {
+			i--;
 		}
 	}
 
