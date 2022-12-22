@@ -50,16 +50,17 @@ function findRemainingBalls(direction, strength) {
 					if (strength[i] > strength[j]) {
 						result.splice(result.indexOf(j), 1);
 					} else if (strength[i] < strength[j]) {
-						result.splice(i, 1);
+						result.splice(result.indexOf(i), 1);
 						i -= 2;
 						break;
 					} else {
 						result.splice(i, 2);
 					}
-				} else if (direction[i] === direction[j]) {
+				} else if (direction[i] < 0 || (direction[i] === direction[j])) {
 					j++;
 					break;
-					continue;
+				} else {
+					// break;
 				}
 			}
 		}
