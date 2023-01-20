@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Fruktur:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fruktur', cursive;
+}
+:root {
+    --bg: #010405;
+    --bg-top: linear-gradient(to top, #010405, transparent);
+    --text: #ff9425;
+}
+body {
+    background: var(--bg);
+}
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+section::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: var(--bg-top);
+	z-index: 10;
+}
+section img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+}
+.sec {
+	position: relative;
+	padding: 100px;
+	text-align: center;
+}
+.sec h2 {
+	font-size: 5em;
+	color: var(--text);
+	margin-bottom: 20px;
+}
+.sec p {
+	color: white;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-family: Consolas;
+}
